@@ -26,13 +26,13 @@ __Système de Gestion d’un Centre de Convalescence__
 
 Le projet sera structuré en trois couches principales :
 
-`* Base de données (SQL avancé)`
+`Base de données (SQL avancé)`
 
-La base de données relationnelle constituera le cœur du système. Elle sera conçue selon un modèle normalisé et représentée via un schéma UML.
+La base de données relationnelle représentée via un schéma UML.
 
-Fonctionnalités SQL avancées :
+`Fonctionnalités SQL avancées :`
 
-Tables relationnelles (patients, chambres, personnel, soins, admissions, etc.)
+Tables relationnelles (patients, chambres, personnel)
 
 Clés primaires et étrangères
 
