@@ -38,7 +38,7 @@ Clés primaires et étrangères
 
 Contraintes d’intégrité (NOT NULL, UNIQUE, CHECK)
 
-Triggers pour :
+`Triggers pour :`
 
 Vérifier la disponibilité d’une chambre avant admission
 
@@ -56,7 +56,7 @@ Gérer les procédures d’admission et de sortie
 
 Vues pour simplifier les requêtes complexes
 
-🔹 Backend (PHP)
+`Backend (PHP)`
 
 Le backend sera développé en PHP et assurera :
 
