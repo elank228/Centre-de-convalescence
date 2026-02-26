@@ -32,7 +32,7 @@ La base de données relationnelle représentée via un schéma UML.
 
 `Fonctionnalités SQL avancées :`
 
-Tables relationnelles (patients, chambres, personnel)
+Tables relationnelles (etage, chambres, lit)
 
 Clés primaires et étrangères
 
@@ -43,8 +43,6 @@ Contraintes d’intégrité (NOT NULL, UNIQUE, CHECK)
 Vérifier la disponibilité d’une chambre avant admission
 
 Mettre à jour automatiquement le statut d’une chambre
-
-Enregistrer les logs d’activités
 
 Fonctions stockées pour :
 
@@ -64,36 +62,21 @@ La connexion sécurisée à la base de données
 
 Le traitement des formulaires
 
-La gestion des sessions utilisateurs
-
-L’authentification (administrateur, médecin, infirmier)
-
 L’appel des procédures stockées
 
 La gestion des erreurs
 
-Le backend jouera un rôle central dans la logique métier et la communication entre la base de données et l’interface utilisateur.
-
-🔹 Frontend (HTML + CSS)
+`Frontend (HTML + CSS)`
 
 L’interface utilisateur sera développée en HTML et CSS afin d’offrir :
 
 Une navigation claire et intuitive
 
-Des formulaires dynamiques pour la gestion des patients
-
 Un tableau de bord administratif
 
 Une visualisation des chambres disponibles
 
-Un design responsive adapté aux différents écrans
-
 ## 4. Modélisation UML
 
-Le projet inclura :
-* Diagramme de cas d’utilisation
-* Diagramme de classes
-* Diagramme de séquence
-* Modèle Entité-Relation (MER)
-* Ces schémas permettront de structurer le système avant son implémentation technique et d’assurer une cohérence globale dans le développement.
-* Un tableau de bord
+<img width="1115" height="215" alt="image" src="https://github.com/user-attachments/assets/5dd8d56d-a5d5-42fb-9d34-bd00ed2d7f1f" />
+
