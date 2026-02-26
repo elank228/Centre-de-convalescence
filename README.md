@@ -1,4 +1,4 @@
-# Centre-de-convalescence
-Projet de con
+# Projet: Centre de convalescence
 
-FOR SHURE
+Ce projet consiste a crééer un site sur le quel on aura les differents informations sur le centre de convalescence.
+
