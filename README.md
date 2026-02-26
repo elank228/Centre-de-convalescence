@@ -4,29 +4,29 @@ __Système de Gestion d’un Centre de Convalescence__
 
 ## 1. Présentation Générale
 
-Ce projet consiste à concevoir et développer une application web complète dédiée à la gestion d’un centre de convalescence. L’objectif est de digitaliser l’ensemble des processus administratifs et médicaux afin d’optimiser le suivi des patients, la gestion du personnel soignant, l’organisation des chambres et la planification des soins.
+* Ce projet consiste à concevoir et développer une application web complète dédiée à la gestion d’un centre de convalescence. L’objectif est de digitaliser l’ensemble des processus administratifs et médicaux afin d’optimiser le suivi des patients, la gestion du personnel soignant, l’organisation des chambres et la planification des soins.
 
-Le système permettra une gestion centralisée, sécurisée et efficace des données via une base de données relationnelle robuste, un backend dynamique et une interface utilisateur ergonomique.
+* Le système permettra une gestion centralisée, sécurisée et efficace des données via une base de données relationnelle robuste, un backend dynamique et une interface utilisateur ergonomique.
 
 ## 2. Objectifs du Projet
 
-Gérer les dossiers des patients (admission, suivi médical, sortie)
+* Gérer les dossiers des patients (admission, suivi médical, sortie)
 
-Organiser l’attribution des chambres
+* Organiser l’attribution des chambres
 
-Planifier les soins et traitements
+* Planifier les soins et traitements
 
-Gérer le personnel médical et administratif
+* Gérer le personnel médical et administratif
 
-Assurer l’intégrité et la cohérence des données
+* Assurer l’intégrité et la cohérence des données
 
-Fournir une interface claire et intuitive
+* Fournir une interface claire et intuitive
 
 ## 3. Architecture Technique
 
 Le projet sera structuré en trois couches principales :
 
-🔹 Base de données (SQL avancé)
+`* Base de données (SQL avancé)`
 
 La base de données relationnelle constituera le cœur du système. Elle sera conçue selon un modèle normalisé et représentée via un schéma UML.
 
