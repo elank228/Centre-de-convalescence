@@ -4,7 +4,7 @@ __Système de Gestion d’un Centre de Convalescence__
 
 ## 1. Présentation Générale
 
-* Ce projet consiste à concevoir et développer une application web complète dédiée à la gestion d’un centre de convalescence. L’objectif est de digitaliser l’ensemble des processus administratifs et médicaux afin d’optimiser le suivi des patients, la gestion du personnel soignant, l’organisation des chambres et la planification des soins.
+* Ce projet consiste à concevoir et développer une application web complète dédiée à la gestion d’un centre de convalescence. L’objectif est de digitaliser l’ensemble des processus administratifs et médicaux `#0969DA` afin d’optimiser le suivi des patients, la gestion du personnel soignant, l’organisation des chambres et la planification des soins.
 
 * Le système permettra une gestion centralisée, sécurisée et efficace des données via une base de données relationnelle robuste, un backend dynamique et une interface utilisateur ergonomique.
 
