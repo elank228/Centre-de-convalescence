@@ -9,7 +9,7 @@ CREATE TABLE `Lit`(
     `Occupations` BOOLEAN NOT NULL,
     `numero_Chambres` BIGINT NOT NULL,
     `dateEntree` DATE NOT NULL,
-    `dateSortie` DATE NOT NULL
+    `dateSortie` DATE NULL
 );
 CREATE TABLE `Classes`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
