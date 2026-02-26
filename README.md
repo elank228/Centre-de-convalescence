@@ -1,46 +1,5 @@
 # Centre-de-convalescence
 
-Trop bien le php et le SQL on adore trop vive Mme Dumas
+Trop bien le php et le SQL on adore trop !!!!! vive Mme Dumas
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-HAIL HITLER
+Fait le loup très méchant
