@@ -46,3 +46,12 @@ Classes des chambres : les quatres classes possibles sont codées à l’aide d�
 1 : enfant  2 : femme  3 : homme  4 : vide
 
 Ensemble des chambres : Une chambre est caractérisée par son numéro d’étage, sa classe et le nombre de lits occupés, Nblits, qu’elle comporte. NC désigne le nombre de chambres que comportent le centre de soins.
+
+#Travail demandé :
+
+Vous devez créer un tableau de bord pour un centre de convalescence présentant les taux d’occupation du centre, ainsi que la répartition des chambres selon la classe, selon son taux de remplissage.
+
+De plus, vous devrez gérer :
+
+l’arrivée, ainsi que le départ d’un convalescent. (uniquement arrivée ou départ sans identifier la personne)
+Et l’application devra afficher le nombre de présents pour le service des repas.
