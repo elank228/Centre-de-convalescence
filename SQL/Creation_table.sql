@@ -2,14 +2,14 @@ CREATE TABLE `Chambres`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `numero` BIGINT NOT NULL,
     `etages` BIGINT NOT NULL,
-    `nbLits` BIGINT NOT NULL
+    `NbLits` BIGINT NOT NULL
 );
 CREATE TABLE `Lit`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `Occupations` TINYINT NOT NULL,
     `numero_Chambres` BIGINT NOT NULL,
     `dateEntree` DATE NOT NULL,
-    `dateSortie` DATE NOT NULL,
-    `Occupation` BIGINT NOT NULL
+    `dateSortie` DATE NULL
 );
 CREATE TABLE `Classes`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
