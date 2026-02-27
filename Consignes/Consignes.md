@@ -1,6 +1,6 @@
-TP – Centre de convalescence
+# TP – Centre de convalescence
 
-L’application informatique à créer devra faciliter l’étude du plan d’occupation des lits d’un centre de convalescence. Un tableau de bord (informations concentrées sur un seul écran) doit permettre de :
+`L’application informatique à créer devra faciliter l’étude du plan d’occupation des lits d’un centre de convalescence. Un tableau de bord (informations concentrées sur un seul écran) doit permettre de :`
 
 savoir comment attribuer un lit à un nouveau convalescent
 
@@ -32,22 +32,25 @@ Partiellement occupée : elle comporte au moins un lit occupé et au moins un li
 
 Une chambre pleine ou partiellement occupée ne comporte que des convalescents de même catégorie. Ainsi, un nouveau convalescent, un enfant par exemple, ne peut être placé que dans une chambre vide ou dans une chambre partiellement occupée par des enfants.
 
-Lors de l’arrivée d’un convalescent, on privilégie :
+## Lors de l’arrivée d’un convalescent, on privilégie :
 
-Le placement en chambre partiellement occupée dans le cas d’un enfant
+`Le placement en chambre partiellement occupée dans le cas d’un enfant`
 
-Le placement en chambre vide dans le cas d’un adulte de préférence à l’étage 1 s’il s’agit d’une femme, et à l’étage 2 s’il s’agit d’un homme.
+`Le placement en chambre vide dans le cas d’un adulte de préférence à l’étage 1 s’il s’agit d’une femme, et à l’étage 2 s’il s’agit d’un homme.`
 
 Description de la structure d’information retenue
 
 La gestion envisagée s’appuie sur les conventions d’informations suivantes :
 
 Classes des chambres : les quatres classes possibles sont codées à l’aide d’entiers :
-1 : enfant  2 : femme  3 : homme  4 : vide
+* 1 : enfant
+* 2 : femme
+* 3 : homme
+* 4 : vide
 
-Ensemble des chambres : Une chambre est caractérisée par son numéro d’étage, sa classe et le nombre de lits occupés, Nblits, qu’elle comporte. NC désigne le nombre de chambres que comportent le centre de soins.
+`Ensemble des chambres : Une chambre est caractérisée par son numéro d’étage, sa classe et le nombre de lits occupés, Nblits, qu’elle comporte. NC désigne le nombre de chambres que comportent le centre de soins.`
 
-#Travail demandé :
+# Travail demandé :
 
 Vous devez créer un tableau de bord pour un centre de convalescence présentant les taux d’occupation du centre, ainsi que la répartition des chambres selon la classe, selon son taux de remplissage.
 
