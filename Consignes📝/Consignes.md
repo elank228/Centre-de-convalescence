@@ -76,7 +76,7 @@ Si deux ou plusieurs chambres de la classe considérée sont partiellement occup
 L’attribution d’un lit est impossible si les deux conditions suivantes sont vérifiées simultanément :
 La chambre est pleine : tous les lits des chambres de la classe du convalescent sont occupés.
 Et Il n’y a plus de chambres vides
-Prévoir une fonction stockée __Recherche__ recevant les paramètres Classe et renvoyant le NuméroChambre attribuée ou zéro en cas d’impossibilité.
+Prévoir une fonction stockée `Recherche` recevant les paramètres Classe et renvoyant le NuméroChambre attribuée ou zéro en cas d’impossibilité.
 Prévoir un trigger Arrivée permettant de mettre à jour la table CHAMBRE si cela est possible.
 
 ## Conseil n° 4 Imprimé pour le service des repas.
