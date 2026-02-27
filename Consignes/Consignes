@@ -1,0 +1,48 @@
+TP – Centre de convalescence
+
+L’application informatique à créer devra faciliter l’étude du plan d’occupation des lits d’un centre de convalescence. Un tableau de bord (informations concentrées sur un seul écran) doit permettre de :
+
+savoir comment attribuer un lit à un nouveau convalescent
+
+effectuer des statistiques sur l’occupation des lits..
+
+aider au service des repas
+
+Le centre de convalescence possède NE(=3) étages.
+
+Nous supposons ici que les convalescents sont répartis dans les chambres selon que ce sont des enfants, des adultes femmes ou des adultes hommes.
+
+Il y a donc 4 classes de chambres : les chambres d’enfants, de femmes, d’hommes et les chambres vides.
+
+L’étage 0 est réservé aux enfants. Les étages 1 et 2 accueillent indifféremment des hommes et des femmes.
+
+Chaque étage comporte 15 chambres réparties comme suit :
+
+Le rez de chaussée comprend 10 chambres à deux lits et 5 chambres à 3 lits.
+
+Les 1er étage et 2ème étage comprend 10 chambres individuelles et 5 chambres doubles.
+
+Une chambre peut être dans l’un des trois états suivants :
+
+Vide : tous les lits sont vides (Nblits=0)
+
+Pleine : tous les lits sont pleins (Nblits=NL)
+
+Partiellement occupée : elle comporte au moins un lit occupé et au moins un lit vide (1<= Nblits <NL)
+
+Une chambre pleine ou partiellement occupée ne comporte que des convalescents de même catégorie. Ainsi, un nouveau convalescent, un enfant par exemple, ne peut être placé que dans une chambre vide ou dans une chambre partiellement occupée par des enfants.
+
+Lors de l’arrivée d’un convalescent, on privilégie :
+
+Le placement en chambre partiellement occupée dans le cas d’un enfant
+
+Le placement en chambre vide dans le cas d’un adulte de préférence à l’étage 1 s’il s’agit d’une femme, et à l’étage 2 s’il s’agit d’un homme.
+
+Description de la structure d’information retenue
+
+La gestion envisagée s’appuie sur les conventions d’informations suivantes :
+
+Classes des chambres : les quatres classes possibles sont codées à l’aide d’entiers :
+1 : enfant  2 : femme  3 : homme  4 : vide
+
+Ensemble des chambres : Une chambre est caractérisée par son numéro d’étage, sa classe et le nombre de lits occupés, Nblits, qu’elle comporte. NC désigne le nombre de chambres que comportent le centre de soins.
