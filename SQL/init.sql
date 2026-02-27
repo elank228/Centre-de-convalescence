@@ -55,6 +55,6 @@ INSERT INTO `Classes`(`id`, `libelle`) VALUES
 (4, 'Vide');
 
 INSERT INTO `Etages`(`id`, `numeroClasse`) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+(0, 1),
+(1, 2),
+(2, 3);
