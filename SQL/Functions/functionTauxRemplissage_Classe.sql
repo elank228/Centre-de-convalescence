@@ -6,13 +6,13 @@ BEGIN
     DECLARE nbLitsTotal INT;
     DECLARE total float DEFAULT 0;
     
-    SELECT COUNT(id) INTO nbLitsOccupés
+    SELECT COUNT(numeroLit) INTO nbLitsOccupés
     FROM Lit
-    WHERE Occupations = 1 AND numero_Chambres IN (SELECT numero FROM Chambres WHERE etages IN(SELECT id FROM Etages WHERE numeroClasse = cla));
+    WHERE Occupations = 1 AND numero_Chambres IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
     
-    SELECT COUNT(id) INTO nbLitsTotal
+    SELECT COUNT(numeroLit) INTO nbLitsTotal
     FROM Lit
-    WHERE numero_Chambres IN (SELECT numero FROM Chambres WHERE etages IN(SELECT id FROM Etages WHERE numeroClasse = cla));
+    WHERE numero_Chambres IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
     
     SET total = nbLitsOccupés * 100 / nbLitsTotal;
     RETURN total;
