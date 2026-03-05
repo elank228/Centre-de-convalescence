@@ -1,18 +1,18 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` FUNCTION `TauxRemplissage_Etage1`(`etg` INT) RETURNS float
+CREATE DEFINER=`root`@`localhost` FUNCTION `TauxRemplissage_Etage`(`etg` INT) RETURNS float
     NO SQL
 BEGIN
     DECLARE nbLitsOccupés INT;
     DECLARE nbLitsTotal INT;
     DECLARE total float DEFAULT 0;
     
-    SELECT COUNT(id) INTO nbLitsOccupés
+    SELECT COUNT(numeroLit) INTO nbLitsOccupés
     FROM Lit
-    WHERE Occupations = 1 AND numero_Chambres IN (SELECT numero FROM Chambres WHERE etages = etg);
+    WHERE Occupation = 1 AND numeroChambre IN (SELECT numeroChambre FROM Chambres WHERE etages = etg);
     
-    SELECT COUNT(id) INTO nbLitsTotal
+    SELECT COUNT(numeroLit) INTO nbLitsTotal
     FROM Lit
-    WHERE numero_Chambres IN (SELECT numero FROM Chambres WHERE etages = etg);
+    WHERE numeroChambre IN (SELECT numeroChambre FROM Chambres WHERE etages = etg);
     
     SET total = nbLitsOccupés * 100 / nbLitsTotal;
     RETURN total;
