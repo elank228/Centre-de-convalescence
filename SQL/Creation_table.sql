@@ -1,30 +1,35 @@
+DROP DATABASE IF exists centredeconvalescence; 
+CREATE DATABASE centredeconvalescence;
 CREATE TABLE `Chambres`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `numero` BIGINT NOT NULL,
+    `numeroChambre` BIGINT  NOT NULL PRIMARY KEY,
     `etages` BIGINT NOT NULL,
     `nbLits` BIGINT NOT NULL,
     `numeroClasse` BIGINT NOT NULL
-);
+) ENGINE = innodb;
+
 CREATE TABLE `Lit`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `numero_Chambres` BIGINT NOT NULL,
+    `numeroLit` BIGINT  NOT NULL PRIMARY KEY,
+    `numeroChambre` BIGINT NOT NULL,
     `dateEntree` DATE NOT NULL,
     `dateSortie` DATE NOT NULL,
     `Occupation` BIGINT NOT NULL
-);
+)ENGINE = innodb;
+
 CREATE TABLE `Classes`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `idClasse` BIGINT  NOT NULL PRIMARY KEY,
     `libelle` VARCHAR(255) NOT NULL
-);
+)ENGINE = innodb;
+
 CREATE TABLE `Etages`(
-    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `numeroClasse` BIGINT NOT NULL
-);
+    `numeroEtage` BIGINT  NOT NULL PRIMARY KEY,
+    `numeroClasse` BIGINT  NOT NULL
+)ENGINE = innodb;
+
 ALTER TABLE
-    `Etages` ADD CONSTRAINT `etages_numeroclasse_foreign` FOREIGN KEY(`numeroClasse`) REFERENCES `Classes`(`id`);
+    `Etages` ADD CONSTRAINT `etages_numeroclasse_foreign` FOREIGN KEY(`numeroClasse`) REFERENCES `Classes`(`idClasse`);
 ALTER TABLE
-    `Chambres` ADD CONSTRAINT `chambres_numeroclasse_foreign` FOREIGN KEY(`numeroClasse`) REFERENCES `Classes`(`id`);
+    `Chambres` ADD CONSTRAINT `chambres_numeroclasse_foreign` FOREIGN KEY(`numeroClasse`) REFERENCES `Classes`(`idClasse`);
 ALTER TABLE
-    `Chambres` ADD CONSTRAINT `chambres_etages_foreign` FOREIGN KEY(`etages`) REFERENCES `Etages`(`id`);
+    `Chambres` ADD CONSTRAINT `chambres_etages_foreign` FOREIGN KEY(`etages`) REFERENCES `Etages`(`numeroEtage`);
 ALTER TABLE
-    `Lit` ADD CONSTRAINT `lit_numero_chambres_foreign` FOREIGN KEY(`numero_Chambres`) REFERENCES `Chambres`(`numero`);
+    `Lit` ADD CONSTRAINT `lit_numero_chambres_foreign` FOREIGN KEY(`numeroChambre`) REFERENCES `Chambres`(`numeroChambre`);
