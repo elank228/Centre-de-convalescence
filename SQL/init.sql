@@ -1,4 +1,4 @@
-INSERT INTO `Chambres`(`numeroChambre`, `etages`,`NbLits`, 'numeroClasse') VALUES
+INSERT INTO `Chambres`(`numeroChambre`,`etages`,`NbLits`,`numeroClasse`) VALUES
 -- RDC
 (001, 0, 2, 4),
 (002, 0, 2, 4),
