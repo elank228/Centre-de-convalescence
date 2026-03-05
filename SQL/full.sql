@@ -1,4 +1,5 @@
-INSERT INTO `Lit`(`id`, `Occupations`, `numero_Chambres`, `dateEntree`, `dateSortie`) VALUES
+DELETE FROM `Lit`;
+INSERT INTO `Lit`(`numeroLit`, `Occupation`, `numeroChambre`, `dateEntree`, `dateSortie`) VALUES
 -- RDC
 (1, 1, 001, '2026-01-01', null), (2, 1, 001, '2026-01-01', null), 
 (3, 1, 002, '2026-01-01', null), (4, 1, 002, '2026-01-01', null),
