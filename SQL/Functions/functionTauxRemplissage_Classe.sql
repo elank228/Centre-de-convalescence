@@ -8,11 +8,11 @@ BEGIN
     
     SELECT COUNT(numeroLit) INTO nbLitsOccupés
     FROM Lit
-    WHERE Occupations = 1 AND numero_Chambres IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
+    WHERE Occupation = 1 AND numeroChambre IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
     
     SELECT COUNT(numeroLit) INTO nbLitsTotal
     FROM Lit
-    WHERE numero_Chambres IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
+    WHERE numeroChambre IN (SELECT numeroChambre FROM Chambres WHERE etages IN(SELECT numeroEtage FROM Etages WHERE numeroClasse = cla));
     
     SET total = nbLitsOccupés * 100 / nbLitsTotal;
     RETURN total;
