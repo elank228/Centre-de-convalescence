@@ -1,16 +1,16 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` FUNCTION `TauxRemplissage1`() RETURNS float
+CREATE DEFINER=`root`@`localhost` FUNCTION `TauxRemplissage`() RETURNS float
     NO SQL
 BEGIN
     DECLARE nbLitsOccupés INT;
     DECLARE nbLitsTotal INT;
     DECLARE total float DEFAULT 0;
     
-    SELECT COUNT(id) INTO nbLitsOccupés
+    SELECT COUNT(numeroLit) INTO nbLitsOccupés
     FROM Lit
-    WHERE Occupations = 1;
+    WHERE Occupation = 1;
     
-    SELECT COUNT(id) INTO nbLitsTotal
+    SELECT COUNT(numeroLit) INTO nbLitsTotal
     FROM Lit;
     
     SET total = nbLitsOccupés * 100 / nbLitsTotal;
