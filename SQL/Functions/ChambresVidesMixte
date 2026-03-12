@@ -1,0 +1,26 @@
+BEGIN
+
+	DECLARE numC INT;
+    DECLARE NBLO INT;
+    DECLARE NBLT INT;
+    DECLARE wfin2 INT;
+    
+    DECLARE C2 CURSOR FOR
+        SELECT chambres.numeroChambre, SUM(Occupation) as nbLitsOccupe, nbLits as nbLitsTotal
+        FROM lit
+        INNER JOIN chambres ON lit.numeroChambre = chambres.numeroChambre
+        INNER JOIN etages ON chambres.etages = etages.numeroEtage
+        INNER JOIN classes ON etages.numeroClasse = classes.idClasse
+        WHERE libelle = "Mixte" 
+        GROUP BY numeroChambre
+        HAVING (nbLitsTotal - nbLitsOccupe) = nbLitsTotal
+        LIMIT 1;
+        
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET wfin2 = 1;
+
+        OPEN C2;
+
+        FETCH C2 INTO numC, NBLO, NBLT;
+            RETURN numC;
+
+END

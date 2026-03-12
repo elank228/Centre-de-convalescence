@@ -1,0 +1,19 @@
+BEGIN 
+
+DECLARE numC INT;
+
+SELECT MoitieRempliG(Genre) INTO numC;
+IF numC != -1 THEN
+RETURN numC;
+
+ELSE 
+
+SELECT ChambresVidesG(Genre) INTO numC;
+If numC != -1 THEN 
+RETURN numC;
+
+ELSE 
+RETURN 0;
+ENd IF;
+END IF;
+END
