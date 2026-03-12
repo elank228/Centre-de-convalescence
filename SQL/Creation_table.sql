@@ -12,7 +12,8 @@ CREATE TABLE `Lit`(
     `numeroChambre` BIGINT NOT NULL,
     `dateEntree` DATE NOT NULL,
     `dateSortie` DATE NOT NULL,
-    `Occupation` BIGINT NOT NULL
+    `Occupation` BIGINT NOT NULL,
+    `numeroLit` BIGINT NOT NULL
 )ENGINE = innodb;
 
 CREATE TABLE `Classes`(
