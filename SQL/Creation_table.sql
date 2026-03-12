@@ -13,7 +13,7 @@ CREATE TABLE `Lit`(
     `dateEntree` DATE NOT NULL,
     `dateSortie` DATE NOT NULL,
     `Occupation` BIGINT NOT NULL,
-    `numeroLit` BIGINT NOT NULL
+    `numeroClasse` TINYINT NOT NULL
 )ENGINE = innodb;
 
 CREATE TABLE `Classes`(
