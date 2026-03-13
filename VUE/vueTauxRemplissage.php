@@ -1,5 +1,6 @@
 <?php 
 require('MODELE/tauxRemplissage.php');
+$titre = 'Dashboard'; 
 //déclaration temporaire des variables 
 $tauxRemplissageGeneral = 100;
 $tauxRemplissageRDC = 25;
