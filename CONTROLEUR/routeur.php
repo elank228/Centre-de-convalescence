@@ -1,5 +1,4 @@
 <?php
-//Encore en cours de modification
 
 require_once 'CONTROLEUR/controleurTauxRemplissage.php';
 require_once 'CONTROLEUR/controleurAccueil.php';
@@ -14,9 +13,9 @@ class Routeur
 
     public function __construct()
     {
-        $this->ctrlTauxRemplissage = new ControleurTauxRemplissage();
-        $this->ctrlAccueil = new ControleurAccueil();
-        //faire pour chaque controleur
+        $this->ctrlTauxRemplissage = new controleurTauxRemplissage();
+        $this->ctrlAccueil = new controleurAccueil();
+        //ajouter pour chaque controleur
     }
 
     //Traite une requête entrante
@@ -24,13 +23,8 @@ class Routeur
     {
         try {
             if (isset($_GET['action'])) {
-                if ($_GET['action'] == 'tauxRemplissage') {
-                    /*$idBillet = intval($this->getParametre($_GET, 'id'));
-                    if ($idBillet != 0) {
-                        $this->ctrlBillet->billet($idBillet);
-                    } else {
-                        throw new Exception('Identifiant de billet non valide');
-                    }*/
+                if ($_GET['action'] == 'x') {
+                    
                 } else if ($_GET['action'] == 'commenter') {
                     $auteur = $this->getParametre($_POST, 'auteur');
                     $contenu = $this->getParametre($_POST, 'contenu');
@@ -39,8 +33,8 @@ class Routeur
                 } else {
                     throw new Exception('Action non valide');
                 }
-            } else { //aucune action définie : affichage de l'acceuil
-                $this->ctrlAccueil->acceuil();
+            } else { //aucune action définie : affichage des taux de remplissage
+                $this->ctrlTauxRemplissage->tauxRemplissage();
             }
         } catch (Exception $e) {
             $this->erreur($e->getMessage());
