@@ -11,9 +11,6 @@
             <div class="container">
                 <div class="row">
                     <nav class="col navbar navbar-expand-lg navbar-dark">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarContent">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
                         <div id="NavbarContent" class="collapse navbar-collapse">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
