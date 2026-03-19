@@ -1,6 +1,12 @@
 <div class="header">
-    <img src="assets\img\LOGO CENTRE DE CONVALESCENCE.png" alt="LOGO CENTRE DE CONVALESCENCE" class="logo">
-    <h1>Dashboard du centre de convalescence</h1>
+    <div class="row">
+        <div class="col-12 col-lg-2">
+            <img src="assets\img\LOGO CENTRE DE CONVALESCENCE.png" alt="LOGO CENTRE DE CONVALESCENCE" class="logo">
+        </div>
+        <div class="col-12 col-lg-10">
+            <h1>Dashboard du centre de convalescence</h1>
+        </div>
+    </div>
         <div class="bg-dark">
             <div class="container">
                 <div class="row">
