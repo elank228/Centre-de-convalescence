@@ -21,21 +21,21 @@ $couleur = 'green';
                 echo ('<tr>');
                 for ($i = 0; $i < 15; $i++) {
                     //if (TauxRemplissage_Chambre($i) = 0) {$color='green'} elseif (TauxRemplissage_Chambre($i) = 0.5) {$color='orange'} elseif (TauxRemplissage_Chambre($i) = 1) {$color=red} endif
-                    echo ('<td style="border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
+                    echo ('<td style="padding: 12px; border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
                     $z++;
                 }
                 $z = 101;
                 echo ('</tr>');
                 echo ('<tr>');
                 for ($i = 0; $i < 15; $i++) {
-                    echo ('<td style="border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
+                    echo ('<td style="padding: 12px; border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
                     $z++;
                 }
                 $z = 1;
                 echo ('</tr>');
                 echo ('<tr>');
                 for ($i = 0; $i < 15; $i++) {
-                    echo ('<td style="border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
+                    echo ('<td style="padding: 12px; border: 1px solid black; color: black; background-color: '.$couleur.';">' . $y[$z] . '</td>');
                     $z++;
                 }
                 echo ('</tr>');
