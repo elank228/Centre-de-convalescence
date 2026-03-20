@@ -1,0 +1,11 @@
+// Il impacte la table lit et est en After Update
+
+
+//début du trigger
+BEGIN
+
+UPDATE chambres
+SET numeroClasse = NEW.NumeroClasse
+WHERE numeroChambre = OLD.numeroChambre;
+
+END
