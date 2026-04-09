@@ -1,0 +1,55 @@
+<?php
+require_once 'MODELE/modeleGestionChambre.php';
+require_once 'VUE/Vue.php';
+
+class controleurGestionChambre {
+
+    private $modele;
+
+    public function __construct() {
+        $this->modele = new modeleGestionChambre();
+    }
+
+    // Affiche le tableau d'occupation des chambres
+    public function afficherChambres() {
+        $chambres = $this->modele->getChambres();
+        $vue = new Vue('GestionChambre');
+        $vue->generer(['chambres' => $chambres]);
+    }
+
+    // Affiche le formulaire d'admission avec les lits libres et les classes
+    public function afficherFormulaireAdmission() {
+        $litsLibres = $this->modele->getLitsLibres();
+        $classes    = $this->modele->getClasses();
+        $vue = new Vue('GestionChambre');
+        $vue->generer([
+            'chambres'   => $this->modele->getChambres(),
+            'litsLibres' => $litsLibres,
+            'classes'    => $classes,
+            'action'     => 'admission'
+        ]);
+    }
+
+    // Traite l'admission d'un patient
+    public function admettrePatient($numeroLit, $numeroClasse) {
+        $this->modele->admettrePatient($numeroLit, $numeroClasse);
+        $this->afficherChambres();
+    }
+
+    // Affiche le formulaire de sortie avec les lits occupés
+    public function afficherFormulaireSortie() {
+        $litsOccupes = $this->modele->getLitsOccupes();
+        $vue = new Vue('GestionChambre');
+        $vue->generer([
+            'chambres'    => $this->modele->getChambres(),
+            'litsOccupes' => $litsOccupes,
+            'action'      => 'sortie'
+        ]);
+    }
+
+    // Traite la sortie d'un patient (le trigger SQL gère dateSortie et numeroClasse chambre)
+    public function sortirPatient($numeroLit) {
+        $this->modele->sortirPatient($numeroLit);
+        $this->afficherChambres();
+    }
+}
