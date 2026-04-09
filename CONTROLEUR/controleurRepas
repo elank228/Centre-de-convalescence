@@ -1,0 +1,39 @@
+<?php
+require_once 'MODELE/modeleRepas.php';
+require_once 'VUE/Vue.php';
+
+class controleurRepas {
+
+    private $modele;
+
+    public function __construct() {
+        $this->modele = new modeleRepas();
+    }
+
+    // Affiche le menu de sélection d'étage
+    public function afficherMenu() {
+        $vue = new Vue('RepasMain');
+        $vue->generer([]);
+    }
+
+    // Affiche les lits occupés du RDC (étage 0)
+    public function afficherRDC() {
+        $lits = $this->modele->getLitsOccupesParEtage(0);
+        $vue = new Vue('RepasRDC');
+        $vue->generer(['lits' => $lits]);
+    }
+
+    // Affiche les lits occupés du 1er étage
+    public function afficherPremierEtage() {
+        $lits = $this->modele->getLitsOccupesParEtage(1);
+        $vue = new Vue('RepasPremier');
+        $vue->generer(['lits' => $lits]);
+    }
+
+    // Affiche les lits occupés du 2ième étage
+    public function afficherDeuxiemeEtage() {
+        $lits = $this->modele->getLitsOccupesParEtage(2);
+        $vue = new Vue('Repas2ieme');
+        $vue->generer(['lits' => $lits]);
+    }
+}
